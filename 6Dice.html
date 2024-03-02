@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Roll</title>
+  <style>
+    .dice {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      text-align: center;
+      line-height: 100px;
+      font-size: 24px;
+      margin: 20px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dice" id="dice">Click to roll</div>
+
+<script>
+  document.getElementById('dice').addEventListener('click', function() {
+    var randomNumber = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
+    this.innerText = randomNumber; // Update the dice value
+  });
+</script>
+
+</body>
+</html>
